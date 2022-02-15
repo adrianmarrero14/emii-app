@@ -1,14 +1,20 @@
-import logo from './logo.svg';
+// Styles
 import './App.css';
-import { Header } from './layouts/header/Header';
-import { Footer } from './layouts/footer/Footer';
+
+// Modules
+import { Routes, Route, Link } from "react-router-dom";
+
+// Components
+import { Home } from './layouts/home/Home';
+import { About } from './layouts/about/About';
 
 function App() {
   return (
     <>
-      <Header title="Header" />
-      <div>Hello</div>
-      <Footer title="Footer" />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+      </Routes>
     </>
   );
 }
